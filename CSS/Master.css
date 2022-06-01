@@ -15,12 +15,7 @@
 
 
 /* image */
-img{
+.welcome-img{
   width:80%;
   margin-left:25%;
-}
-
-#Title{
-  background-image: url("../Images/Main_Page_Welcome_img.jpg");
-  background-repeat: no-repeat;
 }

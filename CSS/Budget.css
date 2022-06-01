@@ -1,12 +1,3 @@
-#NavBar{
-  background-image: url("../Images/Main_Page_Welcome_img.jpg");
-  background-repeat: no-repeat;
-}
-
-.navbar{
-  padding:0 2% 0 2%;
-}
-
 .budget-core-content{
   background-image: url("../Images/Wood_backgroiund_image.png");
   color: white;
@@ -17,7 +8,7 @@
 }
 
 #Budget-core{
-    margin: 5% 8%;
+    margin: 5% 13%;
     text-align: center;
 }
 
@@ -148,7 +139,7 @@
 
 table{
   background-color: #D2042D;
-  width: 95%;
+  width: 100%;
   border-radius: 10px;
   font-size: 30px;
   margin: 0 auto;
@@ -157,6 +148,11 @@ table{
 
 td{
   font-size: 20px;
+}
+
+th{
+	font-size: 25px;
+	
 }
 
 
@@ -170,3 +166,4 @@ td{
 .progress-green-color{
     background-color: 	#0BDA51;
 }
+

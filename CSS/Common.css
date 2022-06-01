@@ -1,6 +1,9 @@
 /* all the fonts in our website is montserrat font */
 body{
     font-family: "Montserrat";
+	background: linear-gradient(180deg, #eec33d, #C58F00 );
+	background-repeat: no-repeat;
+	
 }
 
 /*Used for general headings in the website*/
@@ -29,13 +32,13 @@ h4{
 
 
 
-
 /* navbar */
 .navbar-brand{
   font-size: 4rem;
-  font-weight: 500;
-  font-variant: small-caps;
-  color: white;
+  	font-family: 'Mountains of Christmas', cursive;
+	font-weight: bold;
+	padding: 0.5rem;
+
 }
 
 .navbar{
@@ -46,9 +49,38 @@ h4{
     padding: 0 2rem 0 0 ;
     font-weight: 500;
 }
-.nav-link{
 
+#NavBar{
+  /*background-image: url("../Images/Main_Page_Welcome_img.jpg");*/
+  /*background: linear-gradient(50deg, #eec33d, #AF8057 );*/
+  /*background-color: #ea9d3e;*/
+  background-repeat: no-repeat;
 }
+
+#common-bg-color{
+	background: linear-gradient(180deg, #eec33d, #AF8057 );
+	margin: 0;
+	padding: 0;
+	
+}
+
+.bee-img-div{
+		width: 6%;
+		padding-bottom: 0.5rem;
+}
+
+.bee-img{
+	width: 100%;
+}
+
+.title-color{
+		color: #312f17 !important;
+}
+
+
+
+
+
 
 /* fonts */
 .ubuntu-font{
