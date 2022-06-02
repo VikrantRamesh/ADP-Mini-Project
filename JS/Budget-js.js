@@ -173,7 +173,23 @@ function Calc_Exp(){
           }
 }
 
+
+
 //updating the income-expence ratio
+function Change_progress_dist(){
+    var inc_ratio = (total_Income/(total_Income+total_Expence)) * 100;
+    var exp_ratio = (total_Expence/(total_Income+total_Expence)) * 100;
+
+    document.getElementById("Income-bar").style.width =  inc_ratio + "%";
+    document.getElementById("Expence-bar").style.width = exp_ratio + "%";
+
+    document.getElementById("income_perc").innerHTML = Math.floor(inc_ratio) + "%";
+    document.getElementById("expense_perc").innerHTML = Math.floor(exp_ratio) + "%";
+}
+
+
+
+//updating the income distribution Ratio
 function Change_progress_dist(){
     var inc_ratio = (total_Income/(total_Income+total_Expence)) * 100;
     var exp_ratio = (total_Expence/(total_Income+total_Expence)) * 100;

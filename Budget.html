@@ -34,33 +34,39 @@
   <body>
 	<!--<section id="common-bg-color">-->
     <section id="NavBar">
-      <div class="navbar navbar-expand-lg navbar-dark">
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
 
         <h1 class="navbar-brand navbar-light title-color">Budget Bee</h1>
-			<div class="bee-img-div">
-			<a>
-				<img src="./Images/iconbee.png" alt="" class="bee-img">
-			</a>
-			</div>
 
-        <ul class="navbar-nav ms-auto">
+  			<div class="bee-img-div">
 
-            <li class="nav-item">
-              <a class="nav-link " href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Budget.html">Budget</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" >Goals</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signin.html">Sign In</a>
-            </li>
+      				<img src="./Images/iconbee.png" alt="" class="bee-img">
+  			</div>
 
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#TogglerId" aria-controls="TogglerId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      </div>
+        <div class="collapse navbar-collapse" id ="TogglerId">
+
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link " href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Budget.html">Budget</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" >Goals</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="signin.html">Sign In</a>
+                  </li>
+
+              </ul>
+        </div>
+      </nav>
     </section>
 
     <section id="Budget-core">
@@ -96,7 +102,7 @@
                               </div>
 
                               <div class="col-lg-6 col-md-12">
-                                  <input type="text" name="Income-amt" placeholder="Income Amount" class="input-text input-income-text" required>
+                                  <input type="text" name="Income-amt" placeholder="Income Amount" class="input-income-text" required>
                               </div>
                             </div>
                             <!-- end of row 1 -->
@@ -208,8 +214,8 @@
                             </div>
 
 
-                            <div class="col-lg-6 col-md-12">
-                                <input type="text" name="Expence-amt" placeholder="Expence Amount" class="input-text input-expence-text">
+                            <div class="col-lg-6">
+                                <input type="text" name="Expence-amt" placeholder="Expence Amount" class="input-expence-text">
                             </div>
                           </div>
                           <!--end of row 1 -->
@@ -221,7 +227,7 @@
 
                               <div class="row row-sm-margin">
 
-                                    <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4">
 
 
                                             <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Food" value="Food">
@@ -232,7 +238,7 @@
 
                                       </div>
 
-                                    <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4">
 
 
                                             <input type="radio" name="Expence-mode" class="radio isHidden" id="Expence-mode-health" value="Health">
@@ -243,7 +249,7 @@
 
                                     </div>
 
-                                    <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4">
 
 
                                             <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Trasport"  value="Transport">
@@ -258,7 +264,7 @@
 
                               <div class="row row-sm-margin">
 
-                                  <div class="col-lg-4 col-md-6">
+                                  <div class="col-lg-4">
 
 
                                             <input type="radio" name="Expence-mode" class="radio isHidden" id="Expence-mode-Cloths" value="Clothes">
@@ -269,7 +275,7 @@
 
                                     </div>
 
-                                    <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4">
 
 
                                             <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Communications" value="Communications">
@@ -279,7 +285,7 @@
 
                                     </div>
 
-                                    <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4">
 
 
                                             <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Entertainment" value="Entertainment">
@@ -296,7 +302,7 @@
 
 
 
-                                  <div class="col-lg-4 col-md-6">
+                                  <div class="col-lg-4">
 
 
                                           <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Sports"  value="Sports">
@@ -306,7 +312,7 @@
 
                                   </div>
 
-                                  <div class="col-lg-4 col-md-6 ">
+                                  <div class="col-lg-4">
 
 
                                           <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Eating"  value="Eating">
@@ -317,7 +323,7 @@
 
                                     </div>
 
-                                  <div class="col-lg-4 col-md-6">
+                                  <div class="col-lg-4 ">
 
 
                                           <input type="radio" name="Expence-mode"class="radio isHidden" id="Expence-mode-Toiletry"  value="Toiletry">
@@ -355,11 +361,15 @@
 
 
       <div class="Core-Dist">
+              <p id="Err_Msg"></p>
+
+
               <h2>Balance Budget: </h2><h3 id="Balance-Budget">0 ₹</h3>
 
+              <!-- row has the income-expense ratio and the history tab -->
               <div class="row">
                 <div class="col-lg-7 col-md-12">
-                  
+
                     <h2>Income-Expense Ratio: </h2>
                     <!-- progress bar -->
 
@@ -371,11 +381,11 @@
 
                     <div class="row">
                         <div class="col-6">
-                          <h3> Income: <h2 id="income_perc">50%</h2></h3>
+                          <h3><i class="fa-solid fa-circle fa-2xs inc-ratio-circle"></i> Income: <h2 id="income_perc">50%</h2></h3>
                         </div>
 
                         <div class="col-6">
-                          <h3>Expense: <h2 id="expense_perc">50%</h2> </h3>
+                          <h3><i class="fa-solid fa-circle fa-2xs exp-ratio-circle"></i> Expense: <h2 id="expense_perc">50%</h2> </h3>
                         </div>
 
                     </div>
@@ -384,28 +394,45 @@
 
                 <div class="col-lg-5 col-md-12">
                     <div class="History" id="history">
+
+                      
                         <h2>HISTORY</h2><br>
-                        <table id="hist-table">
-                          <tr>
 
-                                <th>Type</th>
 
-                                <th>Mode</th>
+                        <div class="overflow-auto scroll">
+                          <Table id="hist-table">
+                            <tr>
 
-                                <th>Amount</th>
+                                  <th>Type</th>
 
-                                <th>Date</th>
+                                  <th>Mode</th>
 
-                                <th>Time</th>
+                                  <th>Amount</th>
 
-                          <tr>
-                          <tr>
+                                  <th>Date</th>
 
-                          </tr>
+                                  <th>Time</th>
+
+                            </tr>
+
                         </table>
+                      </div>
 
                     </div>
 
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <h2>Income Distribution: </h2>
+                  <div class="progress" id="income-distribution">
+                      <div class="progress-bar progress-clr-blue progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"  id = "Salary-bar"></div>
+                      <div class="progress-bar progress-clr-blue progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="Bonus-bar"></div>
+                      <div class="progress-bar progress-clr-blue progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="Gift-bar"></div>
+                      <div class="progress-bar progress-clr-blue progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="Others-bar"></div>
+                  </div>
                 </div>
 
               </div>

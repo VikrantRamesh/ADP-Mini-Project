@@ -3,8 +3,12 @@
   color: white;
   opacity: 0.9;
   border-radius: 20px;
-  padding: 1% 0;
+  padding: 1% 3%;
   text-shadow: 2px 2px 5px #6E260E;
+}
+
+.row{
+  margin: 2%;
 }
 
 h2{
@@ -12,19 +16,16 @@ h2{
 }
 
 #Budget-core{
-    margin: 8% 22%;
+    margin: 3% 17%;
     text-align: center;
 }
 
-.input-text{
-  border-width: 3px;
-  padding: 1%;
-  width:40%;
-  height: 70%;
-  border-radius: 10px;
-  border:none;
-  box-shadow: 2px 2px 5px #6E260E;
-}
+
+
+
+
+/* budget butons */
+
 
 .Budget-Buttons-income{
   size:100%;
@@ -66,7 +67,18 @@ h2{
   transition: 0.4s;
 }
 
+
+
+
+
+/* textbox */
+
 .input-income-text, .input-expence-text{
+  padding: 1%;
+  border-radius: 10px;
+  border:none;
+  box-shadow: 2px 2px 5px #6E260E;
+
   width: 70%;
   height: 75%;
   background-color:	#FF8C00;
@@ -77,6 +89,9 @@ h2{
 
 
 
+
+/* collapse boxes */
+
 #Income-collapse, #Expence-collapse{
   background-color: #CD853F;
   opacity: 0.8;
@@ -84,20 +99,20 @@ h2{
   border-radius: 30px;
 }
 
+/* radio boxes */
+
 .checkbox-des{
   background-color: #FF8C00;
   border-radius: 15px;
   padding: 5%;
   padding-top: 8%;
-  width: 80%;
+  width: 100%;
   font-size: 30px;
 }
-
 .checkbox-des:hover{
   box-shadow: 0px 0px 8px 4px  #E26310;
   background-color: #E26310;
 }
-
 .radio-label{
   font-size: 30px;
 }
@@ -112,10 +127,31 @@ h2{
   background-color: #E26310;
 }
 
+/* small row margin for radio buttons */
 .row-sm-margin{
   margin: 1%;
 }
 
+
+
+
+/* progress bar */
+.progress{
+  margin: auto 5% auto;
+  height: 30px;
+  border-radius: 20px;
+}
+.progress-green-color{
+    background-color: 	#0BDA51;
+}
+
+/* bar circle styling */
+.inc-ratio-circle{
+  color: 	#0BDA51;
+}
+.exp-ratio-circle{
+  color: 	#ff4444;
+}
 
 
 
@@ -133,12 +169,9 @@ h2{
   width: 40%;
 }
 
-/* history tab */
-.History{
-  background-color: 	#FFA500;
-  opacity: 0.8;
-  border-radius: 20px;
-}
+
+
+/* tables */
 
 table{
   background-color: #D2042D;
@@ -147,7 +180,6 @@ table{
   font-size: 30px;
   margin: 0 auto;
 }
-
 
 td{
   font-size: 20px;
@@ -158,13 +190,81 @@ th{
 }
 
 
-/* progress bar */
-.progress{
-  margin: auto 5% auto;
-  height: 30px;
+/* history tab */
+.History{
+  background-color: 	#FFA500;
+  opacity: 0.8;
   border-radius: 20px;
+  width: 107%;
 }
 
-.progress-green-color{
-    background-color: 	#0BDA51;
+.scroll{
+  height: 200px;
+}
+
+
+
+
+#Err_Msg{
+  color: #EB212E;
+  font-size: 45px;
+  text-shadow:  2px 2px 4px white;
+}
+
+
+
+
+
+@media (max-width: 992px){
+
+            #Budget-core{
+                margin: 3% 2%;
+                text-align: center;
+            }
+
+            .Budget-Buttons-income{
+              padding: 6%;
+              margin: 2% 0;
+            }
+
+            .Budget-Buttons-expence{
+              padding: 6%;
+              margin: 2% 0;
+            }
+
+            .checkbox-des{
+                padding: 1%;
+                margin: 3% auto;
+            }
+
+}
+
+@media (max-width: 1400px) and (min-width: 992px){
+
+
+          #Budget-core{
+              margin: 3% 2%;
+              text-align: center;
+          }
+
+          .Budget-Buttons-income{
+            padding: 6%;
+            margin: 2% 0;
+          }
+
+          .Budget-Buttons-expence{
+            padding: 6%;
+            margin: 2% 0;
+          }
+
+
+}
+
+@media (max-width: 1700px) and (min-width:1400px){
+
+
+          #Budget-core{
+              margin: 3% 15%;
+              text-align: center;
+          }
 }
