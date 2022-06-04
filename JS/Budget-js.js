@@ -111,7 +111,7 @@ function Calc_Inc(){
 
           // getting time and date
           const d = new Date();
-          var date = d.getDate()+"/"+d.getMonth()+"/"+(d.getYear()+1900);
+          var date = d.getDate()+"/"+d.getMonth()+"/"+(d.getYear()-100);
           var time = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
 
 
@@ -164,7 +164,7 @@ function Calc_Exp(){
 
               // getting time and date
               const d = new Date();
-              var date = d.getDate()+"/"+d.getMonth()+"/"+(d.getYear()+1900);
+              var date = d.getDate()+"/"+d.getMonth()+"/"+(d.getYear()-100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           );
               var time = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
 
 

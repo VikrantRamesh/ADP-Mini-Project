@@ -27,10 +27,16 @@ h2{
 
 
 .core-first-row{
-    margin: 5% 0;
+    margin: 5% 3%;
+    padding: 2% 2%;
+    border: 5px solid #52514E;
+    border-radius: 15px;
 }
 .core-second-row{
-    margin: 5% 0;
+    padding: 0 8%;
+    margin: 5% 3%;
+    border: 5px solid #52514E;
+    border-radius: 15px;
 }
 .core-row-third{
     margin: 0;
