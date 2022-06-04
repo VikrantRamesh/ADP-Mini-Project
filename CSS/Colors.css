@@ -1,0 +1,50 @@
+
+/* progress-bar-colors */
+.progress-clr-green{
+    background-color: 	#18A558;
+    color: 	#18A558;
+}
+.progress-clr-blue{
+  background-color: #0d6efd;
+  color: #0d6efd;
+}
+.progress-clr-teal{
+  background-color: #544c32;
+  color:#544c32;
+}
+.progress-clr-violet{
+  background-color: #8F00FF;
+  color: #8F00FF;
+}
+.progress-clr-pink{
+  background-color:#FF69B4;
+  color:#FF69B4;
+}
+.progress-clr-gray{
+  background-color:#D7DBDD;
+  color:#D7DBDD;
+}
+.progress-clr-hunter{
+  background-color:#436436;
+  color:#436436;
+}
+.progress-clr-brown{
+  background-color:#2E1E0F;
+  color:#2E1E0F;
+}
+.progress-clr-pur-pink{
+  background-color:#F900BF;
+  color:#F900BF;
+}
+.progress-clr-saffron{
+  background-color:#EB5353;
+  color:#EB5353;
+}
+
+/* bar circle styling */
+.inc-ratio-circle{
+  color: 	#0BDA51;
+}
+.exp-ratio-circle{
+  color: 	#ff4444;
+}

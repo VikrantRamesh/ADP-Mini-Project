@@ -4,7 +4,8 @@
   opacity: 0.9;
   border-radius: 20px;
   padding: 1% 3%;
-  text-shadow: 2px 2px 5px #6E260E;
+  box-shadow: 0px 0px 8px 10px #312f17;
+  color:  #52514E;
 }
 
 .row{
@@ -20,16 +21,55 @@ h2{
     text-align: center;
 }
 
+.Core-Dist{
+      margin: 7% 0;
+}
 
 
+.core-first-row{
+    margin: 5% 0;
+}
+.core-second-row{
+    margin: 5% 0;
+}
+.core-row-third{
+    margin: 0;
+}
+
+.Expense-main{
+  padding: 0 8%;
+  border: 5px solid #52514E;
+  border-radius: 15px;
+  margin: 3%;
+}
+.graph-base{
+    margin: 0;
+    border:2px solid #52514E;
+    height: 500px;
+    width: 0;
+    padding: 0;
+}
+.core-row-fifth{
+    border:2px solid #52514E;
+    border-radius:10px;
+}
+.core-row-sixth{
+  margin: 0;
+}
+
+ .expense-core-bar{
+      padding:0;
+      height: 35px;
+      width: 0px;
+      border-radius: 10px;
+ }
 
 
 /* budget butons */
 
 
 .Budget-Buttons-income{
-  size:100%;
-  padding: 8%;
+  padding: 5%;
   border-color: #00ab66;
   border-width: 10px;
   color: White;
@@ -49,8 +89,7 @@ h2{
 }
 
 .Budget-Buttons-expence{
-  size:100%;
-  padding: 8%;
+  padding: 5%;
   border-color: #C41E3A;
   color: White;
   background-color: #C41E3A;
@@ -93,10 +132,13 @@ h2{
 /* collapse boxes */
 
 #Income-collapse, #Expence-collapse{
-  background-color: #CD853F;
+  color: white;
+  background-color: #3249ad;
   opacity: 0.8;
   padding: 2%;
   border-radius: 30px;
+
+  box-shadow: 0px 0px 8px 8px #312f17;
 }
 
 /* radio boxes */
@@ -111,7 +153,7 @@ h2{
 }
 .checkbox-des:hover{
   box-shadow: 0px 0px 8px 4px  #E26310;
-  background-color: #E26310;
+  background-color: #44AF56;
 }
 .radio-label{
   font-size: 30px;
@@ -124,7 +166,7 @@ h2{
 
 /* checking radio */
 .radio:checked + .checkbox-des{
-  background-color: #E26310;
+  background-color: #44AF56;
 }
 
 /* small row margin for radio buttons */
@@ -140,19 +182,15 @@ h2{
   margin: auto 5% auto;
   height: 30px;
   border-radius: 20px;
-}
-.progress-green-color{
-    background-color: 	#0BDA51;
+  border: 2px solid #29dfca;
 }
 
-/* bar circle styling */
-.inc-ratio-circle{
-  color: 	#0BDA51;
-}
-.exp-ratio-circle{
-  color: 	#ff4444;
-}
 
+
+/* graph desgn */
+.core-row-third.div{
+  width: 5%;
+}
 
 
 /* publish buttons */
@@ -179,6 +217,7 @@ table{
   border-radius: 10px;
   font-size: 30px;
   margin: 0 auto;
+  color: #FFF;
 }
 
 td{
@@ -187,15 +226,18 @@ td{
 
 th{
     font-size: 25px;
+    letter-spacing: 1.5px;
 }
 
 
 /* history tab */
 .History{
-  background-color: 	#FFA500;
+  background-image: url("../Images/history-background.jpg");
   opacity: 0.8;
   border-radius: 20px;
-  width: 107%;
+  width: 102%;
+  box-shadow: 0px 0px 8px 10px #312f17;
+  color:  #552A6A;
 }
 
 .scroll{

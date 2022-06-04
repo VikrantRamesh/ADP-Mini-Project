@@ -1,17 +1,16 @@
 /* all the fonts in our website is montserrat font */
 body{
-    font-family: "Montserrat";
+  font-family: "Montserrat";
 	background: linear-gradient(180deg, #eec33d, #C58F00 );
 	background-repeat: no-repeat;
-
 }
 
 /*Used for general headings in the website*/
 h2{
-  font-weight: 800;
+  font-family: 'Kanit', "Montserrat";
+  font-weight: bold;
   font-size: 3rem;
   line-height:1.5;
-  letter-spacing: 2px;
 }
 
 /* used for smaller sub-headings below h2 */
@@ -25,7 +24,7 @@ h3{
 /* plain text in the website below h3 */
 h4{
   font-weight:300;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height:1.4;
 }
 
