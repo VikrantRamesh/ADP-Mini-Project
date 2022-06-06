@@ -189,8 +189,10 @@ function Calc_Exp(){
               Change_progress_dist();
               Change_inc_progress_dist();
               Change_exp_progress_dist(exp_amt,exp_mode);
+              change_Today_Balance_amt();
 
               document.getElementById("Err_Msg").innerHTML="";
+
             }
           }
 }
@@ -209,7 +211,7 @@ function Change_progress_dist(){
 }
 
 
-//updating the income distribution Ratio
+//updating the income distribution
 function Change_inc_progress_dist(inc_amt, inc_mode){
 
     if (inc_mode == "Salary"){
@@ -241,7 +243,7 @@ function Change_inc_progress_dist(inc_amt, inc_mode){
     document.getElementById("others_perc").innerHTML = Math.floor(others_ratio) + "%";
 }
 
-//updating the expense distribution Ratio
+//updating the expense distribution
 function Change_exp_progress_dist(inc_amt, inc_mode){
 
     if (inc_mode == "Food"){
@@ -256,7 +258,7 @@ function Change_exp_progress_dist(inc_amt, inc_mode){
     else if (inc_mode == "Clothes"){
         clothes += inc_amt;
     }
-    if (inc_mode == "Communications"){
+    else if (inc_mode == "Communications"){
         communications += inc_amt;
     }
     else if (inc_mode == "Entertainment"){
@@ -314,4 +316,70 @@ function Change_exp_progress_dist(inc_amt, inc_mode){
     document.getElementById("sports_perc").innerHTML = Math.floor(sports_ratio) + "%";
     document.getElementById("eating_perc").innerHTML = Math.floor(eating_ratio) + "%";
     document.getElementById("toiletry_perc").innerHTML = Math.floor(toiletry_ratio) + "%";
+}
+
+
+
+var today_Limit = 2000;
+
+// functions of the second fluid-container
+
+
+function exp_limit_select(){
+    limit = document.getElementById("select_limit").value;
+    limit = parseInt(limit);
+
+    change_Today_Balance_amt();
+}
+
+function exp_limit_text(){
+  limit = document.getElementById("custom_limit").value;
+  limit = parseInt(limit);
+
+  change_Today_Balance_amt();
+}
+
+function change_Today_Balance_amt(){
+    var balance = limit - total_Expence ;
+    document.getElementById("rem-balance-amt").innerHTML = "₹"+balance;
+
+    if (balance <= 0){
+        document.getElementById("rem-balance-amt").style.color = "#D21F3C";
+    }
+
+    var max = Math.max(food,health,transport,clothes,communications,entertainment,sports,eating,toiletry);
+
+    if (max !=0){
+        var max_exp_text = ""
+
+        if (max == food){
+            max_exp_text += "<br>Food: " + max +"₹";
+        }
+        if (max == health){
+            max_exp_text += "<br>Health: "+ max+"₹";
+        }
+        if (max == transport){
+            max_exp_text += "<br>Transport: "+ max+"₹";
+        }
+        if (max == clothes){
+            max_exp_text += "<br>Clothes: "+ max+"₹";
+        }
+        if (max == communications){
+            max_exp_text += "<br>Communications: "+ max+"₹";
+        }
+        if (max == entertainment){
+            max_exp_text += "<br>Entertainment: "+ max+"₹";
+        }
+        if (max == sports){
+            max_exp_text += "<br>Sports: "+ max+"₹";
+        }
+        if (max == eating){
+            max_exp_text += "<br>Eating: "+ max+"₹";
+        }
+        if (max == toiletry){
+            max_exp_text += "<br>Toiletry: "+ max+"₹";
+        }
+
+        document.getElementById("max_exp_text").innerHTML = max_exp_text;
+  }
 }

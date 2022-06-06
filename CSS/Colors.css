@@ -25,12 +25,12 @@
   color:#D7DBDD;
 }
 .progress-clr-hunter{
-  background-color:#436436;
-  color:#436436;
+  background-color:#A38A00;
+  color:#A38A00;
 }
 .progress-clr-brown{
-  background-color:#2E1E0F;
-  color:#2E1E0F;
+  background-color:#DAA06D;
+  color:#DAA06D;
 }
 .progress-clr-pur-pink{
   background-color:#F900BF;
@@ -39,6 +39,10 @@
 .progress-clr-saffron{
   background-color:#EB5353;
   color:#EB5353;
+}
+.progress-clr-yellow{
+  background-color:  #FEDE00;
+  color:  #FEDE00;
 }
 
 /* bar circle styling */
