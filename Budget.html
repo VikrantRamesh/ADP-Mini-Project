@@ -36,6 +36,10 @@
     <link rel="stylesheet" href="CSS\Budget.css">
     <link rel="stylesheet" href="CSS\Colors.css">
 
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="Images\favicon.ico">
+
+
   </head>
 
 
@@ -380,7 +384,7 @@
                       <p id="Err_Msg"></p>
 
 
-                      <h2>Balance Budget: </h2><h3 id="Balance-Budget">0 ₹</h3>
+                      <h2>Balance Budget: </h2><h1 id="Balance-Budget">0 ₹</h1>
 
                       <!-- row has the income-expense ratio and the history tab -->
                       <div class="row core-first-row common-box-border">
@@ -645,15 +649,18 @@
               <div class="col-lg-4 col-md-12">
                   <div class=" common-box-border-2">
                       <h1>Maximum Expenditure:</h1>
-                      <h1 class="max-exp overflow-auto scroll" id = "max_exp_text">-</h1>
+                      <h1 class="max-exp overflow-auto scroll" id = "max_exp_text"></h1>
                   </div>
               </div>
           </div>
 
           <div class="row main-row">
                 <h2>Daily Expenditure:</h2>
-                <div class="progress" id="Daily-exp">
-                      <div class="progress-bar progress-clr-green progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"  id = "Daily-exp-bar"></div>
+                    <div class="progress progress-daily">
+                          <div class="progress-bar progress-clr-yellow progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"  id = "Daily-exp-bar-rem"></div>
+                          <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"  id = "Daily-exp-bar-spent"></div>
+                    </div>
+
                 </div>
           </div>
 

@@ -326,25 +326,28 @@ var today_Limit = 2000;
 
 
 function exp_limit_select(){
-    limit = document.getElementById("select_limit").value;
-    limit = parseInt(limit);
+    today_Limit = document.getElementById("select_limit").value;
+    today_Limit = parseInt(today_Limit);
 
     change_Today_Balance_amt();
 }
 
 function exp_limit_text(){
-  limit = document.getElementById("custom_limit").value;
-  limit = parseInt(limit);
+  today_Limit = document.getElementById("custom_limit").value;
+  today_Limit = parseInt(today_Limit);
 
   change_Today_Balance_amt();
 }
 
 function change_Today_Balance_amt(){
-    var balance = limit - total_Expence ;
+    var balance = today_Limit - total_Expence ;
     document.getElementById("rem-balance-amt").innerHTML = "₹"+balance;
 
     if (balance <= 0){
         document.getElementById("rem-balance-amt").style.color = "#D21F3C";
+    }
+    else{
+      document.getElementById("rem-balance-amt").style.color = "white";
     }
 
     var max = Math.max(food,health,transport,clothes,communications,entertainment,sports,eating,toiletry);
@@ -382,4 +385,9 @@ function change_Today_Balance_amt(){
 
         document.getElementById("max_exp_text").innerHTML = max_exp_text;
   }
+
+    // changing progress bar
+    document.getElementById("Daily-exp-bar-rem").style.width = (today_Limit/(total_Expence+today_Limit)) *100 + "%";
+    document.getElementById("Daily-exp-bar-spent").style.width = (total_Expence/(total_Expence+today_Limit)) *100+ "%";
+
 }

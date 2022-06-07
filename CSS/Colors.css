@@ -41,8 +41,11 @@
   color:#EB5353;
 }
 .progress-clr-yellow{
-  background-color:  #FEDE00;
-  color:  #FEDE00;
+  background-color:  #FFBE00;
+  color:  #FFBE00;
+}
+.mainpage-gold{
+    color:  #C58F00;
 }
 
 /* bar circle styling */
