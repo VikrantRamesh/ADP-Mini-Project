@@ -34,7 +34,7 @@ h3{
 }
 
 .sign-in-image{
-	background-image: url("../Images/honeycomb.jpg");
+	background-image: url("honeycomb.jpg");
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 }
