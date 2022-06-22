@@ -1,122 +1,165 @@
-
-
-h2{
-  font-size: 3.5rem;
-  line-height:1.5;
-  font-weight: 500;
-}
-
-
-h3{
-  font-weight:500;
-  font-size: 1.3rem;
-  line-height:1.5;
-}
-
-.login-form-container{
-
-    color:#fff;
-    margin: 3% auto 10%;
-    text-align: center;
-
-    padding: 3% 0;
-
-    background-color:rgba(234,157,62, 0.4);
-    border-radius: 20px;
-    box-shadow: 0px 0px 6px 10px 	#312f17;
-    width: 28%;
-}
-
-/* homepage container */
-.container-fluid{
-  padding: 0% 4%;
-}
-
-::placeholder{
-  font-size: 1.2rem;
-  font-weight: 400;
-  color:	black;
-  padding: 4% 2% 0;
-}
-
-input{
-  padding: 0 2% 0;
-  margin: 5% 0;
-  width:75%;
-  font-weight: 500;
-  font-size: 30px;
-  height: 60%;
-  border-radius: 10px;
-  border:none;
-  box-shadow: 2px 2px 5px 	#eec33d;
-}
-
-.form-row{
-  margin: 2% 0;
-}
-
-.submit{
-  width: 40%;
-  color: white;
-  background-color: #312f17;
-  font-weight: 500;
-  font-size: 21px;
-  border-radius: 30px;
-}
-
-@media (max-width:1400px){
-  .navbar-brand{
-    font-variant: small-caps;
-    font-size: 4rem;
+  h2{
+    font-size: 3rem;
+    line-height:1.5;
+    font-weight: 500;
   }
 
-  .nav-item{
-      font-size: 3rem;
-      padding: 0 2rem 0 0 ;
-      text-align: left;
+
+  h3{
+    font-weight:500;
+    font-size: 1.3rem;
+    line-height:1.5;
   }
 
-  #login-form{
+  body{
+      height: 100vh;
+  }
+
+  /* err messages */
+  p{
+      color: #FF2E2E;
+      font-size: 1.2rem;
+      font-weight: 600;
+      font-family: sans-serif;
+  }
+
+  .login-form-container{
+
       color:#fff;
-      margin-bottom: 17%;
-      display:inline-block;
-      padding: 3% 3%;
-      background-color:rgba(252,188,171, 0.4);
+      margin: 3% auto 7%;
+      text-align: center;
       border-radius: 20px;
-      box-shadow: 5px 10px 18px #ffcc99;
-      width: 60%;
-      height:100%;
+      box-shadow: 0px 0px 6px 10px 	#312f17;
+      width: 45%;
+  }
+
+  .login-form-main{
+
+      padding: 2% 0;
+
+  }
+
+  .row-no-margin{
+  	margin:0;
+  }
+
+  .sign-in-image{
+  	background-image: url("../Images/signin-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  	border-top-left-radius: 20px;
+  	border-bottom-left-radius: 20px;
+  }
+
+  .err-msg{
+      height: 20px;
+  }
+
+  /* homepage container */
+  .container-fluid{
+    padding: 0% 4%;
   }
 
   ::placeholder{
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    color:	#ff96cd;
-    padding: 10 2% 0;
+    color:	black;
+    padding: 4% 2% 0;
   }
 
   input{
-    padding: 2% 2% 0;
-    margin: 5% 0;
-    width:70%;
+    padding: 1% 2%;
+    width:80%;
     font-weight: 500;
-    height: 80%;
+    font-size: 25px;
+    height: 100%;
     border-radius: 10px;
     border:none;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px 	#eec33d;
   }
 
+  .pass-class{
+    margin-left: -3%;
+  }
+
+
+  .form-row{
+    margin: 2%;
+  }
+  .show-pass-icon{
+    color: black;
+    margin-left: -8%;
+    position: relative;
+  }
+
+
   .submit{
-    padding: 0 2% 0;
-    width: 50%;
+    width: 40%;
     color: white;
-    background-color: black;
+    background-color: #312f17;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 21px;
     border-radius: 30px;
   }
 
-  .form-row{
-    margin: 4% 0;
+  .submit:disabled{
+      background-color: #696969;
   }
-}
+
+  @mdia (max-width:1400px){
+    .navbar-brand{
+      font-variant: small-caps;
+      font-size: 4rem;
+    }
+
+    .nav-item{
+        font-size: 3rem;
+        padding: 0 2rem 0 0 ;
+        text-align: left;
+    }
+
+    #login-form{
+        color:#fff;
+        margin-bottom: 17%;
+        display:inline-block;
+        padding: 3% 3%;
+        background-color:rgba(252,188,171, 0.4);
+        border-radius: 20px;
+        box-shadow: 5px 10px 18px #ffcc99;
+        width: 60%;
+        height:100%;
+    }
+
+    ::placeholder{
+      font-size: 2rem;
+      font-weight: 400;
+      color:	#ff96cd;
+      padding: 10 2% 0;
+    }
+
+    input{
+      padding: 1% 2%;
+      width:80%;
+      font-weight: 500;
+      font-size: 25px;
+      height: 100%;
+      border-radius: 10px;
+      border:none;
+      box-shadow: 2px 2px 5px #eec33d;
+    }
+
+    .submit{
+      padding: 0 2% 0;
+      width: 50%;
+      color: white;
+      background-color: black;
+      font-weight: 500;
+      font-size: 36px;
+      border-radius: 30px;
+    }
+
+    .form-row{
+      margin: 4% 0;
+    }
+  }

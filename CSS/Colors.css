@@ -21,8 +21,8 @@
   color:#FF69B4;
 }
 .progress-clr-gray{
-  background-color:#D7DBDD;
-  color:#D7DBDD;
+  background-color:#5F9EA0;
+  color:#5F9EA0;
 }
 .progress-clr-hunter{
   background-color:#A38A00;
@@ -54,4 +54,41 @@
 }
 .exp-ratio-circle{
   color: 	#ff4444;
+}
+
+
+/* background colors */
+
+.progress-clr-green-bg{
+    background-color: 	#18A558;
+}
+.progress-clr-blue-bg{
+  background-color: #0d6efd;
+}
+.progress-clr-teal-bg{
+  background-color: #544c32;
+}
+.progress-clr-violet-bg{
+  background-color: #8F00FF;
+}
+.progress-clr-pink-bg{
+  background-color:#FF69B4;
+}
+.progress-clr-gray-bg{
+  background-color:#5F9EA0;
+}
+.progress-clr-hunter-bg{
+  background-color:#A38A00;
+}
+.progress-clr-brown-bg{
+  background-color:#DAA06D;
+}
+.progress-clr-pur-pink-bg{
+  background-color:#F900BF;
+}
+.progress-clr-saffron-bg{
+  background-color:#EB5353;
+}
+.progress-clr-yellow-bg{
+  background-color:  #FFBE00;
 }

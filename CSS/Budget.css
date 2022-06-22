@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .budget-core-content{
   background-image: url("../Images/Wood_backgroiund_image-2.png");
   background-size: cover;
@@ -6,8 +10,21 @@
   border-radius: 20px;
   padding: 1% 0.5%;
   box-shadow: 0px 0px 8px 10px #312f17;
-  margin-top: 5%;
+  margin-top: 1.5%;
+  margin-bottom: 3%;
 }
+
+.budget-core-content-2{
+  background-image: url("../Images/Wood_backgroiund_image-2.png");
+  background-size: cover;
+  color: white;
+  opacity: 0.95;
+  border-radius: 20px;
+  padding: 1% 0.5%;
+  box-shadow: 0px 0px 8px 10px #75E6DA;
+  margin-top: 1.5%;
+}
+
 
 .row{
   margin: 0.5%;
@@ -19,13 +36,25 @@ h2{
 
 
 #Budget-core{
-    margin: 3% 2%;
+    margin: 0% 8%;
     text-align: center;
+}
+
+#Budget-core-2{
+  padding: 0% 8%;
+  text-align: center;
+}
+
+.common-bg{
+    background-image: url("../Images/blue-granite.jpg");
+    padding-bottom:1%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 
-/***************** container-fluid-2 *****************/
+/***************** container-fluid-1 *****************/
 
 
 
@@ -183,8 +212,9 @@ h2{
 /* tables */
 
 table{
-  background-color: #D2042D;
+  background-color: none;
   width: 95%;
+  border: 3px solid 	#556B2F;
   border-radius: 10px;
   font-size: 30px;
   margin: 0 auto;
@@ -193,11 +223,16 @@ table{
 
 td{
   font-size: 1rem;
+  border: 3px solid 	#556B2F;
+  border-radius: 10px;
 }
 
 th{
+  color:#045F5F;
     font-size: 1.2rem;
     letter-spacing: 1.5px;
+    border: 3px solid 	#556B2F;
+    border-radius: 10px;
 }
 
 
@@ -246,20 +281,20 @@ th{
 
 .Expense-main{
   padding: 2% 4%;
-  margin: 3%;
+  margin: 2% 1%;
 }
 
 
 /* income-expense-dist and history */
 .core-first-row{
-    margin: 3% 3%;
+    margin: 2% 1%;
     padding: 2% 1%;
 }
 
 /* income-dist */
 .core-second-row{
-    padding: 0 8%;
-    margin: 3%;
+    padding: 5% 8%;
+    margin: 2% 1%;
 }
 
 /* graph row */
@@ -307,6 +342,11 @@ th{
        width: 0px;
        border-radius: 10px;
        transition: 1.2s;
+       padding: auto 0;
+  }
+
+  .expense-dist-label-border{
+    border-radius: 7px;
   }
 
 
@@ -321,14 +361,33 @@ th{
   padding: 4%;
 }
 .rem-balance-amt{
-    margin: 10% 0 10%;
-    font-size: 8rem;
+    margin: 7% 0 ;
+    font-size: 4rem;
+    animation-name: none;
+    animation-duration: 2.5s;
+}
+
+.balance-ani{
+  animation-name: none;
+  animation-duration: 2.5s;
+}
+
+@keyframes blink {
+    0%{text-shadow: none}
+    50%{text-shadow: 0 0 12px white}
+    100%{text-shadow: none}
+}
+
+@keyframes innerborder {
+  0%{box-shadow: none}
+  50%{box-shadow: 0 0 35px #D21F3C inset}
+  100%{box-shadow: none}
 }
 
 .max-exp{
-    margin: 10% 0 10%;
-    font-size: 2.8rem;
-    color: #D21F3C;
+    margin: 1.5% 0;
+    font-size: 4rem;
+    color: #FF2E2E;
     font-weight: 700px;
 }
 
@@ -338,6 +397,37 @@ th{
   padding: 0;
 }
 
+.scroll-max-exp{
+  height: 18rem;
+}
+
+
+
+.distribution-show-btn{
+    margin: 1% 0 0;
+    width: 100%;
+    border: none;
+    color: white;
+    text-align: center;
+    background: transparent;
+}
+
+.pre-collapse-div{
+  height: 4%;
+}
+
+
+/* footer */
+
+footer{
+      background: linear-gradient(180deg, #eec33d, #C58F00 );
+      padding: 0.5%;
+      color: white;
+}
+
+p{
+  margin: 0;
+}
 
 
 @media (max-width: 992px){

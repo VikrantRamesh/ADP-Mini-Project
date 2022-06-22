@@ -3,6 +3,7 @@ body{
   font-family: 'Kanit', "Montserrat";
 	background: linear-gradient(180deg, #eec33d, #C58F00 );
 	background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
@@ -64,7 +65,6 @@ h4{
 	background: linear-gradient(180deg, #eec33d, #AF8057 );
 	margin: 0;
 	padding: 0;
-
 }
 
 .bee-img-div{
