@@ -3,15 +3,14 @@ html{
 }
 
 .budget-core-content{
-  background-image: url("../Images/Wood_backgroiund_image-2.png");
+  background-color: black;
+  opacity: 0.9;	
   background-size: cover;
   color: white;
-  opacity: 0.9;
   border-radius: 20px;
   padding: 1% 0.5%;
   box-shadow: 0px 0px 8px 10px #312f17;
-  margin-top: 1.5%;
-  margin-bottom: 3%;
+  margin: 1.5% 0 3%;
 }
 
 .budget-core-content-2{
@@ -22,7 +21,7 @@ html{
   border-radius: 20px;
   padding: 1% 0.5%;
   box-shadow: 0px 0px 8px 10px #75E6DA;
-  margin-top: 1.5%;
+ 	margin: 1.5% 0 5%;
 }
 
 
@@ -46,7 +45,7 @@ h2{
 }
 
 .common-bg{
-    background-image: url("../Images/blue-granite.jpg");
+    background-image: url("../Images/blue-granite-3.jpg");
     padding-bottom:1%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,18 +63,18 @@ h2{
 
 .Budget-Buttons-income{
   padding: 5%;
-  border-color: #00ab66;
+  border-color: #82954B;
   border-width: 10px;
   color: White;
-  background-color: #00ab66;
+  background-color: #82954B;
   border-radius: 5%;
   border-style: solid;
-  box-shadow: 2px 2px 5px #6E260E;
+  box-shadow: 2px 2px 5px #82954B;
   width: 70%;
 }
 
 .Budget-Buttons-income:hover{
-  background-color: 		#F28C28;
+  background-color: 	#F28C28;
   border-color: 		#F28C28;
   box-shadow: 0px 0px 10px 2px 	#F28C28;
   transition: 0.4s;
@@ -218,32 +217,34 @@ table{
   border-radius: 10px;
   font-size: 30px;
   margin: 0 auto;
-  color: #FFF;
+  color: #312f17;
 }
 
 td{
   font-size: 1rem;
-  border: 3px solid 	#556B2F;
+  border: 3px solid 	#C58F00;
   border-radius: 10px;
+  color: #312f17;
 }
 
 th{
-  color:#045F5F;
+  color:#312f17;
     font-size: 1.2rem;
     letter-spacing: 1.5px;
-    border: 3px solid 	#556B2F;
+    border: 3px solid 	#C58F00;
     border-radius: 10px;
 }
 
 
 /* history tab */
 .History{
-  background-image: url("../Images/history-background.jpg");
+  /*background-image: url("../Images/history-background.jpg");*/
+  	background: linear-gradient(180deg, #ff9f00, #FFFDD0 );
   opacity: 0.8;
   border-radius: 20px;
   width: 100%;
   box-shadow: 0px 0px 8px 2px #312f17;
-  color:  #552A6A;
+  color:  #FFFDD0;
 }
 
 .scroll{
@@ -347,6 +348,7 @@ th{
 
   .expense-dist-label-border{
     border-radius: 7px;
+    font-size: 1.2rem;
   }
 
 
@@ -387,7 +389,7 @@ th{
 .max-exp{
     margin: 1.5% 0;
     font-size: 4rem;
-    color: #FF2E2E;
+    color: #FF7878;
     font-weight: 700px;
 }
 
@@ -420,7 +422,6 @@ th{
 /* footer */
 
 footer{
-      background: linear-gradient(180deg, #eec33d, #C58F00 );
       padding: 0.5%;
       color: white;
 }
