@@ -25,8 +25,8 @@
         }
 
         $length = rand(4, $len);
-
-        for($i =0; i<$length; $i++){
+			$i = 0;
+        for($i ; $i<$length; $i++){
             $text .= rand(0,9);
         }
 

@@ -13,21 +13,22 @@
         $user_name = $_POST['name'];
         $email = $_POST['email'];
         $pass = $_POST['pass'];
+        
 
-        if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+        if(!empty($user_name) && !empty($pass))
         {
-
         //save to database after validation
-        $user_name = random_num(20);
-        $query = "INSERT INTO accounts (user_name, user_id, email, password) values ('$user_name', '$user_id', '$email', '$pass')";
+        $user_id = random_num(20);
+        $query = "INSERT INTO users (user_name, user_id, email, password) values ('$user_name', '$user_id', '$email', '$pass')";
 
         mysqli_query($con, $query);
 
         header("Location: login.php");
-        die;
-      }else
-    {
-      echo "Please enter valid informattion";
+ 
+      }
+      else {
+      echo "Please enter valid information";
+      die;
     }
   }
 
@@ -121,7 +122,7 @@
                 <form method = "post">
                     <div class="row">
                         <div class="col-lg-12 form-row">
-                            <input type="text" id="name" name="fname"  class="label" placeholder="Username"><br>
+                            <input type="text" id="name" name="name"  class="label" placeholder="Username"><br>
 
                         </div>
                         <p class="err-msg"></p>
@@ -167,7 +168,7 @@
 
                         <div class="col-lg-12 form-row">
 
-                            <h3>Already a Member? <a href="./Login.php">Login</a></h3>
+                            <h3>Already a Member? <a href="./login.php">Login</a></h3>
 
                         </div>
 

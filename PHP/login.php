@@ -1,43 +1,42 @@
+
+
 <?php
   session_start();
     include('connection.php');
     include("functions.php");
-    
-	if($_SERVER['REQUEST_METHOD'] == "POST")
-	{
+      
+	if($_POST)
+	{	
 		//something was posted
+		
 		$user_name = $_POST['user_name'];
-		$password = $_POST['password'];
 
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
-		{
+		$pass = $_POST['password'];
+
+
 
 			//read from database
 			$query = "select * from users where user_name = '$user_name' limit 1";
 			$result = mysqli_query($con, $query);
 
-			if($result)
-			{
-				if($result && mysqli_num_rows($result) > 0)
+				if(mysqli_num_rows($result) > 0)
 				{
 
 					$user_data = mysqli_fetch_assoc($result);
+
 					
-					if($user_data['password'] === $password)
+					if($user_data['password'] === $pass)
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
-						die;
+	
+						header("Location: logout.php");
 					}
-				}
-			}
+						
+				}				
+
 			
-			echo "wrong username or password!";
-		}else
-		{
-			echo "wrong username or password!";
-		}
+			echo "wrong username/Password!";
 	}
 ?>
 
@@ -132,10 +131,10 @@
 
               <h2>LOGIN</h2>
 
-              <form action="">
+              <form  action = "<?php $_SERVER['PHP_SELF'];?>" method="POST">
                 <div class="row">
                     <div class="col-lg-12 form-row">
-                      <input type="text" id="fname" name="fname"  class="label" placeholder="Username"><br>
+                      <input type="text" id="user_name" name="user_name"  class="label" placeholder="Username"><br>
 
                     </div>
 
@@ -143,7 +142,7 @@
 
                     <div class="col-lg-12 form-row">
 
-                      <input type="password" id="fname" name="fname"  class="label" placeholder="password"><br>
+                      <input type="password" id="password" name="password"  class="label" placeholder="password"><br>
 
                     </div>
 
