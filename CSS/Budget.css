@@ -20,7 +20,7 @@ html{
   opacity: 0.95;
   border-radius: 20px;
   padding: 1% 0.5%;
-  box-shadow: 0px 0px 8px 10px #75E6DA;
+  box-shadow: 0px 0px 8px 10px #E26310;
  	margin: 1.5% 0 5%;
 }
 
@@ -83,9 +83,9 @@ h2{
 
 .Budget-Buttons-expence{
   padding: 5%;
-  border-color: #C41E3A;
+  border-color: #82954B;
   color: White;
-  background-color: #C41E3A;
+  background-color: #82954B;
   border-radius: 5%;
   border-width: 10px;
   border-style: solid;
@@ -93,9 +93,9 @@ h2{
 }
 
 .Budget-Buttons-expence:hover{
-  background-color: 		#880808;
-  border-color: 		#880808;
-  box-shadow: 0px 0px 8px 1px #880808;
+  background-color: 		#F28C28;
+  border-color: 		#F28C28;
+  box-shadow: 0px 0px 8px 1px #F28C28;
   transition: 0.4s;
 }
 
@@ -106,8 +106,8 @@ h2{
 /* textbox */
 
 .input-income-text, .input-expence-text{
-  padding: 1%;
-  border-radius: 10px;
+  padding: 2%;
+  border-radius: 5px;
   border:none;
   box-shadow: 2px 2px 5px #6E260E;
 
@@ -116,17 +116,17 @@ h2{
   background-color:	#FF8C00;
   opacity: 0.9;
   color: black;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .drop-down,.normal-input-text{
   padding: 1%;
-  border-radius: 10px;
+  border-radius: 5px;
   border:none;
   box-shadow: 2px 2px 5px #6E260E;
   width: 55%;
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin: 3%;
 }
 
@@ -139,7 +139,7 @@ h2{
   background-color: black;
   opacity: 0.8;
   padding: 2%;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 3%;
   box-shadow: 0px 0px 8px 6px #FFBF00;
 }
@@ -185,7 +185,7 @@ h2{
   margin: 1% 0;
   height: 30px;
   border-radius: 20px;
-  border: 2px solid #29dfca;
+  border: 2px solid #E26310;
 }
 
 
@@ -389,7 +389,7 @@ th{
 .max-exp{
     margin: 1.5% 0;
     font-size: 4rem;
-    color: #FF7878;
+    color: #FF2E2E;
     font-weight: 700px;
 }
 
@@ -496,3 +496,74 @@ p{
               font-size: 4rem;
           }
 }
+/******cards*******/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  position:relative;
+  width:250vw;
+  height:75vh;
+}
+
+.card {
+  width: 80%;
+  height: 80%;
+  max-height: 300px;
+  padding: auto;
+  text-align: center;
+  background: #cbccdc;
+  border-radius: 5px;
+ /* box-shadow: 25px 25px 50px orange, -25px -25px 50px orange;*/
+}
+  .card-container {
+    display: grid;
+    width:100%;
+    height:100%;
+    grid-template-columns: 2.75fr 3fr 2.75fr;
+    align-items: center;
+    justify-items: center;
+    color: white;
+  }
+  .card__content {
+    width: 90%;
+    height: 95%;
+    background: #aaa;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    /*box-shadow:  16px 16px 44px #0a0a0a, 
+             -16px -16px 44px #282a28;*/
+    transition: 0.3s all ease-in-out;
+    }
+
+    .card:hover .card__content {
+      margin-top:-10px;
+    }
+  
+  .card__header {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 40px auto;
+  }
+  .card__button {
+    padding: 10px;
+    border-radius: 5px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 50px auto;
+  }
+
+
