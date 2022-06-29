@@ -25,12 +25,14 @@
 
   .login-form-container{
 
-      color:#fff;
-      margin: 3% auto 7%;
+      color: #fff6af;
+      margin: 5% 30% 50% auto;
       text-align: center;
-      border-radius: 20px;
-      box-shadow: 0px 0px 6px 10px 	#312f17;
+      border-radius: 25px;
+      box-shadow: 30px 25px 30px 1px #7D7530;
       width: 45%;
+      background-color: #0a0a0a;
+      opacity: 0.9;
   }
 
   .login-form-main{
@@ -44,12 +46,11 @@
   }
 
   .sign-in-image{
-  	background-image: url("../Images/signin-image.jpg");
+  	background-image: url("../Images/beebee5.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-
-  	border-top-left-radius: 20px;
-  	border-bottom-left-radius: 20px;
+    background-size :cover;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
   }
 
   .err-msg{
@@ -62,19 +63,19 @@
   }
 
   ::placeholder{
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 300;
     color:	black;
-    padding: 4% 2% 0;
+    padding: 4% 6% 50% 0%;
   }
 
   input{
-    padding: 1% 2%;
+    padding: 1% 6%;
     width:80%;
     font-weight: 500;
     font-size: 25px;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 6px;
     border:none;
     box-shadow: 2px 2px 5px 	#eec33d;
   }
@@ -88,8 +89,8 @@
     margin: 2%;
   }
   .show-pass-icon{
-    color: black;
-    margin-left: -8%;
+    color: grey;
+    margin-left: -10%;
     position: relative;
   }
 
@@ -99,21 +100,12 @@
   font-family:Arial;
   width:140px;
   height:50px;
-  border-width:1px;
-  color:#333333;
-  border-color:#ffaa22;
-  font-weight:bold;
-  border-top-left-radius:6px;
-  border-top-right-radius:6px;
-  border-bottom-left-radius:6px;
-  border-bottom-right-radius:6px;
-  box-shadow: 0px 1px 0px 0px #fff6af;
-  text-shadow: 0px 1px 0px #ffee66;
-  background:linear-gradient(#ffec64, #ffab23);
+  background-color: #eec33d;
+  color:#fff6af
 }
 
 .submit:hover {
-  background: linear-gradient(#ffab23, #ffec64);
+  background-color: #FF2E2E;
 }
 
  /*@media (max-width:1400px){
