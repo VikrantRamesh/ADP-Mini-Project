@@ -10,15 +10,44 @@ if (!check_login($con)) {
 }
 $user_id = $_SESSION['user_id'];
 
-
 $table_name = 'budget_' . $user_id;
+$table_name2 = 'dist_' . $user_id;
 
 if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
-    if (mysqli_num_rows($res) == 0) {
-        $query = "CREATE TABLE $table_name(
 
-            )";
+    if (mysqli_num_rows($res) == 0) {
+
+        $query = "CREATE TABLE $table_name(
+            type VARCHAR(100),
+            mode VARCHAR(100),
+            amount INT(100),
+            date VARCHAR(10),
+            time VARCHAR(10)
+        )";
+
+        $res = mysqli_query($con, $query);
+
+        $query = "CREATE TABLE $table_name2(
+            food VARCHAR(100),
+            health VARCHAR(100),
+            trans VARCHAR(100),
+            cloths VARCHAR(100),
+            taxes VARCHAR(100),
+            entertain VARCHAR(100),
+            sports VARCHAR(100),
+            eating VARCHAR(100),
+            tolietry VARCHAR(100),
+            salary VARCHAR(100),
+            gift VARCHAR(100),
+            bonus VARCHAR(100),
+            others VARCHAR(100),
+        )";
+
+        $res = mysqli_query($con, $query);
     }
+}
+
+if ($_POST) {
 }
 
 ?>
@@ -120,6 +149,10 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
 
         <!-- start of container fluid -->
 
+
+
+
+
         <div class="container-fluid budget-core-content Lalezar-font">
 
             <div class="row main-row">
@@ -152,7 +185,8 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
 
                         <!-- income tab -->
                         <div class="collapse" id="Income-collapse" data-bs-parent="#myGroup">
-                            <form name="income-form" id="income-form">
+                            <form name="income-form" id="income-form" method="post" action="income.php">
+
                                 <h2>INCOME</h2>
 
 
@@ -164,7 +198,7 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
                                     </div>
 
                                     <div class="col-lg-6 col-md-12">
-                                        <input type="text" name="Income-amt" placeholder="Income Amount"
+                                        <input type="text" name="Income" placeholder="Income Amount"
                                             class="input-income-text" required>
                                     </div>
                                 </div>
@@ -253,12 +287,13 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
 
                                     <div class="col-lg-12">
 
-                                        <button type="button" name="Publish-button" class="Budget-Buttons-publish"
+                                        <input type="submit" name="Publish-button" class="Budget-Buttons-publish"
                                             data-bs-toggle="collapse" data-parent="#myGroup"
                                             data-bs-target="#Income-collapse" aria-expanded="false"
-                                            aria-controls="Income-collapse" id="Add_Income">
-                                            <h3>Add Income</h3>
-                                        </button>
+                                            aria-controls="Income-collapse" id="Add_Income" value="Add Income"
+                                            onclick="location.href='expense.php'">
+                                        <!-- <h3>Add Income</h3> -->
+
 
 
                                     </div>
@@ -276,18 +311,18 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
                         <!-- Expence tab -->
                         <div class="collapse" id="Expence-collapse" data-bs-parent="#myGroup">
 
-                            <form name="expence-form" id="income-form">
-                                <h2>EXPENCE</h2>
+                            <form name="expence-form" id="income-form" action="expense.php">
+                                <h2>EXPENSE</h2>
 
                                 <!-- start of row 1 -->
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 collapse-font">
-                                        <h3>Enter your Expence amount:</h3>
+                                        <h3>Enter your Expense amount:</h3>
                                     </div>
 
 
                                     <div class="col-lg-6">
-                                        <input type="text" name="Expence-amt" placeholder="Expence Amount"
+                                        <input type="text" name="Expence-amt" placeholder="Expense Amount"
                                             class="input-expence-text">
                                     </div>
                                 </div>
@@ -430,7 +465,7 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
                                             data-bs-toggle="collapse" data-parent="#myGroup"
                                             data-bs-target="#Expence-collapse" aria-expanded="false"
                                             aria-controls="Expence-collapse" id="Add_Expence">
-                                            <h3>Add Expence</h3>
+                                            <h3>Add Expense</h3>
                                         </button>
 
 
@@ -453,7 +488,10 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
                         <p id="Err_Msg"></p>
 
                         <h2>Balance Budget: </h2>
-                        <h1 id="Balance-Budget">₹0</h1>
+                        <h1 id="Balance-Budget" name="Balance-Budget">₹<?php
+                                                                        include("Calc_bal.php");
+                                                                        echo (calc_balance());
+                                                                        ?></h1>
 
                         <!-- row has the income-expense ratio and the history tab -->
                         <div class="row core-first-row common-box-border">
@@ -573,6 +611,8 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
         </div>
 
         <!-- end of container-fluid -->
+
+        <!--<input type="submit" name="savedata" value="Save Data"> -->
 
     </section>
 
@@ -814,5 +854,10 @@ if ($res = mysqli_query($con, "SHOW TABLES LIKE '$table_name'")) {
     </script>
 
 </body>
+
+<?php
+
+
+?>
 
 </html>
