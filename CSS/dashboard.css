@@ -26,7 +26,7 @@ p{
 .login-form-container{
 
     color: #fff6af;
-    margin: 5% 30% 50% auto;
+    margin: 5% auto 5% auto;
     text-align: center;
     border-radius: 25px;
     box-shadow: 30px 25px 30px 1px #7D7530;
@@ -45,28 +45,14 @@ p{
   margin:0;
 }
 
-.sign-in-image{
-  background-image: url("../Images/beebee5.jpg");
-  background-repeat: no-repeat;
-  background-size :cover;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+.row-vert-margin{
+    padding: 5% 0 5%;
 }
 
-.err-msg{
-    height: 20px;
-}
 
 /* homepage container */
 .container-fluid{
   padding: 0% 4%;
-}
-
-::placeholder{
-  font-size: 1rem;
-  font-weight: 300;
-  color:	black;
-  padding: 4% 6% 50% 0%;
 }
 
 input{
@@ -88,20 +74,16 @@ input{
 .form-row{
   margin: 2%;
 }
-.show-pass-icon{
-  color: grey;
-  margin-left: -10%;
-  position: relative;
-}
 
 
 .submit {
-font-size:15px;
-font-family:Arial;
-width:140px;
-height:50px;
-background-color: #eec33d;
-color:#fff6af
+  margin: 0 auto;
+  font-size:15px;
+  font-family:Arial;
+  width:10%;
+  height:50px;
+  background-color: #4b3b0c;
+  color:#fff6af
 }
 
 .submit:hover {

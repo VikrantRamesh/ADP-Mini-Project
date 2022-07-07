@@ -58,3 +58,21 @@ footer{
 p{
   margin: 0;
 }
+/* statistics section */
+.background-clr{
+  background: linear-gradient(180deg, #eec33d, #C58F00 );
+}
+
+
+/* buttons */
+.custom-signin{
+margin: 7% 3% 5% 0%;
+width: 500px;
+font-size: 30px;
+font-weight: 600;
+}
+
+.center-align{
+align-items: center;
+text-align: center;
+}
