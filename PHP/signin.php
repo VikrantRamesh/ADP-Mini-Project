@@ -1,32 +1,30 @@
 <?php
   session_start();
+  $_SESSION["signed"] = false;
+  include("connection.php");
+  include("functions.php");
 
-    include("connection.php");
-    include("functions.php");
+  if($_SERVER['REQUEST_METHOD'] == "POST")
+  {
+      //collect data from the post variable
 
+      $user_name = $_POST['name'];
+      $email = $_POST['email'];
+      $pass = $_POST['pass'];
 
-
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        //collect data from the post variable
-
-        $user_name = $_POST['name'];
-        $email = $_POST['email'];
-        $pass = $_POST['pass'];
-        
-
-        if(!empty($user_name) && !empty($pass))
-        {
+      
+      
+      if(!empty($user_name) && !empty($pass))
+      {
         //save to database after validation
-        $user_id = random_num(20);
-        $query = "INSERT INTO users (user_name, user_id, email, password) values ('$user_name', '$user_id', '$email', '$pass')";
-
+        $query = "INSERT INTO users (user_name, email, password) VALUES ('$user_name', '$email', '$pass')";
+        $_SESSION["signed"] = true;
         mysqli_query($con, $query);
 
         header("Location: login.php");
- 
+
       }
-      else {
+    else {
       echo "Please enter valid information";
       die;
     }
@@ -90,13 +88,13 @@
         <ul class="navbar-nav ms-auto">
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Budget.html">Budget</a>
+              <a class="nav-link" href="Budget.php">Budget</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="goals.html">Goals</a>
+              <a class="nav-link" href="goals.php">Goals</a>
             </li>
 
             <li class="nav-item">

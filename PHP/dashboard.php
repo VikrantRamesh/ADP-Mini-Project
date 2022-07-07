@@ -1,42 +1,17 @@
 <?php
 session_start();
 include('connection.php');
-include("functions.php");
 
-if (!check_login($con)) {
-  echo "<span style='color:#8B0000;'>LOGIN/SIGNUP to use our premium features.<br>";
+if ($_SESSION["logged"] == true) {
+    echo "Sucessfully logged in!";
 }
 
-$_SESSION["logged"] = false;
+$user_id = $_SESSION['user_id'];
 
-if ($_SESSION["signed"] == true) {
-  echo ("Account sucessfully Created!");
-}
+$query = "select * from users where user_id = '$user_id' limit 1";
+$result = mysqli_query($con, $query);
 
-if ($_POST) {
-  //something was posted
-
-  $user_name = $_POST['user_name'];
-
-  $pass = $_POST['password'];
-
-  //read from database
-  $query = "select * from users where user_name = '$user_name' limit 1";
-  $result = mysqli_query($con, $query);
-
-  if (mysqli_num_rows($result) > 0) {
-
-    $user_data = mysqli_fetch_assoc($result);
-
-    if ($user_data['password'] === $pass) {
-      $_SESSION["logged"] = true;
-      $_SESSION['user_id'] = $user_data['user_id'];
-      header("Location: dashboard.php");
-    }
-  }
-
-  echo "wrong username/Password!";
-}
+$arr = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +56,7 @@ if ($_POST) {
     <script src="https://kit.fontawesome.com/dae2797b42.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="CSS\Common.css">
-    <link rel="stylesheet" href="CSS\signin.css">
+    <link rel="stylesheet" href="CSS\dashboard.css">
 
 </head>
 
@@ -119,7 +94,7 @@ if ($_POST) {
                         <a class="nav-link" href="goals.php">Goals</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="login.php">Log In</a>
+                        <a class="nav-link active" href="dashboard.php">Dashboard</a>
                     </li>
 
                 </ul>
@@ -132,64 +107,65 @@ if ($_POST) {
     <section id="login-form">
         <div class="login-form-container">
 
-            <div class="row row-no-margin">
+            <div class="row row-vert-margin">
 
-                <div class="col-lg-5 sign-in-image">
+                <h2><?php
+                    include('connection.php');
+                    $user_id = $_SESSION['user_id'];
+
+                    $query = "select * from users where user_id = '$user_id' limit 1";
+                    $result = mysqli_query($con, $query);
+
+                    $arr = mysqli_fetch_assoc($result);
+
+                    echo "Welcome" . "    " . $arr['user_name'];
+                    ?></h2>
+
+                <div class="row row-no-margin">
+                    <div class="col-lg-12 form-row">
+                        <h3>User ID:</h3>
+                        <?php
+                        include('connection.php');
+                        $user_id = $_SESSION['user_id'];
+
+                        $query = "select * from users where user_id = '$user_id' limit 1";
+                        $result = mysqli_query($con, $query);
+
+                        $arr = mysqli_fetch_assoc($result);
+
+                        echo $arr['user_id'];
+                        ?>
+
+                    </div>
+
+                    <div class="col-lg-12 form-row">
+                        <h3>E-Mail:</h3>
+                        <?php
+                        include('connection.php');
+                        $user_id = $_SESSION['user_id'];
+
+                        $query = "select * from users where user_id = '$user_id' limit 1";
+                        $result = mysqli_query($con, $query);
+
+                        $arr = mysqli_fetch_assoc($result);
+
+                        echo $arr['email'];
+                        ?>
+
+
+                    </div>
+
 
                 </div>
 
-                <div class="col-lg-7 login-form-main">
-
-                    <h2>LOGIN</h2>
-
-                    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-                        <div class="row">
-                            <div class="col-lg-12 form-row">
-                                <input type="text" id="user_name" name="user_name" class="label"
-                                    placeholder="Username"><br>
-
-                            </div>
-
-                            <p class="err-msg"></p>
-
-                            <div class="col-lg-12 form-row">
-
-                                <input type="password" id="password" name="password" class="label"
-                                    placeholder="password">
-                                <a id="show-pass" onclick="show_pass()"><span class="show-pass-icon"><i
-                                            class="fa-solid fa-eye primary"></i></span></a>
-
-                            </div>
-
-                            <p class="err-msg"></p>
-
-                            <div class="col-lg-12 form-row">
-
-                                <input type="submit" value="Submit" class="submit">
-
-                            </div>
-
-                            <div class="col-lg-12 form-row">
-
-                                <h3>New Member? <a href="./signin.php">Sign In</a></h3>
-
-                            </div>
-
-                        </div>
-
-                    </form>
-
-                </div>
             </div>
 
         </div>
+        <div class="row row-no-margin">
+            <button id="logout" onclick="location.href='logout.php'" class="submit">LOGOUT</button>
+        </div>
     </section>
 
-
-
-
-    <script src="JS\login.js">
-    </script>
 </body>
 
 </html>
