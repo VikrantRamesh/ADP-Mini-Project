@@ -95,34 +95,83 @@
         </nav>
     </section>
     <centre>
-        <h2></h2>
-        <p></p>
 
         <div class="row">
             <div class="col-6">
                 <div class="card">
-
-                    <img src="./Images/bg2.png" alt="money">
-                    <h1>BUDGETING</h1>
-                    <p>calculate your daily expenses</p>
-                    <a href="budgeting.php">
-                        <button type="button" id="budget" class="btns"
-                            onclick="location.href = 'budgeting.php'">calculate</button>
-                    </a>
+                    <h2>Practice Budgeting to Zero</h2>
+                    <h3>Budgeting to zero means tracking every dollar you earn and giving it a place in your budget
+                        until
+                        you don’t have a single dollar to spare. Let’s say, for example, you earn $4,000 a month. After
+                        budgeting your fixed expenses, saving contributions, investments, and any other extras, you
+                        shouldn’t have any money to spare. Budgeting to zero can show you where your money is going and
+                        give
+                        every dollar you earn a purpose.<h3>
                 </div>
             </div>
 
             <div class="col-6">
                 <div class="card">
 
-                    <img src="./Images/bg3.png" alt="money">
-                    <h1>Budgetting Tricks</h1>
-                    <p>Learn to do it the professional way</p>
-                    <a href="seestat.php">
-                        <button type="button" id="stat" class="btns">View</button>
-                    </a>
+                    <h2>Create Your Budget Before the Month Begins</h2>
+                    <h3>To stay on top of your budget, plan ahead. A week before a new month starts, sit down and plan
+                        your next month’s activities and expenses. For instance, you may have a road trip or vet
+                        appointment one month, but not the next. Once you’ve planned your month, set a realistic budget.
+                        Use our app to break down your income, necessary expenses, extra expenses, and your savings
+                        contributions.
+                        <h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <h2>Keep Bills and Receipts Organized</h2>
+                    <h3>Keep your bills and receipts organized in case you need to refer back to a bill to dispute it.
+                        This
+                        may also come in handy for tax purposes. You can choose to file physically via hanging files or
+                        expandable folders. If you do this, sort your documents by month or by account — whichever makes
+                        more sense to you. If you receive your bills and receipts mostly via email, you may want to file
+                        everything electronically.</h3>
                 </div>
             </div>
+
+            <div class="col-6">
+                <div class="card">
+                    <h2>Don’t Forget to Factor in Fun</h2>
+                    <h3>Most budgets are successful when you make room for fun stuff. When you know you have a little
+                        wiggle room to see a movie, splurge on a facial, or visit a new bar, you’re much more likely to
+                        succeed with sticking to your budget. Think of this like a planned cheat day for your finances!
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <h2>Save First, Then Spend</h2>
+                    <h3>Most people choose to spend first and save what’s leftover. This makes saving optional and
+                        doesn’t ensure consistent saving contributions. Think of saving as a fixed expense and factor it
+                        into your budget accordingly. “Do not save what is left after spending; instead spend what is
+                        left after saving.” Who can argue with Warren Buffett?</h3>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card">
+                    <h2>Plan For Large Purchases</h2>
+                    <h3>If you’re considering purchasing an expensive item like a new laptop or TV, the key is planning
+                        ahead. Decide a date that you want to make the purchase, and divide the price by the amount of
+                        days you have. For example, if you want to purchase a $1,500 computer in 300 days, you just need
+                        to save $5 per day.We suggest having at least $1,000, but it’s up to you on how much you want to
+                        save.
+                    </h3>
+                </div>
+
+            </div>
+        </div>
     </centre>
 </body>
 
